@@ -1,27 +1,33 @@
-# PreyectoClase02
+## Introduccion Angular Js v15
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
+Para comenzar a usar Nagular Js es necesario tener instalado el Node Js , a continuacion se adjunta documento para isntalar el mismo
 
-## Development server
+## Documentacion Node Js
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[Node Js](https://nodejs.org/en/download/)
 
-## Code scaffolding
+Se recomienda istalar la version LTS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalacion CLI Angular Js
 
-## Build
+Para comenzar a usar Angular es necesario que instalen de mandera global el CLI de angular que le permitira crar los proyectos y sus respectivos componentes, modulos, etc
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+  npm install -g @angular/cli
+```
 
-## Running unit tests
+## Creacion Proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+  ng new "nombre-del-proyecto"
+```
 
-## Running end-to-end tests
+cambiar "nombre-del-proyecto" por el nombre que desea para iniciar su proyecto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Ejecutar Proyecto
 
-## Further help
+```bash
+  ng serve -o
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+La bandera " -o " es para observar los cambios que se hacen en el proyecto y acutalziarlas automaticamente para que no se tenga que ejecutar el comando cada vez que se haga un cambio en el proyecto
