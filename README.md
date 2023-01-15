@@ -1,38 +1,47 @@
-## Introduccion Angular Js v15
+# Introduccion Angular Js v15
 
-Para comenzar a usar Angular Js es necesario tener instalado el Node Js , a continuacion se adjunta documento para isntalar el mismo
+## Tabla de contenido
+* [Documentación Node Js](#documentación-node-js)
+* [Instalación CLI Angular Js](#instalación-cli-angular-js)
+* [Creación del Proyecto](#creación-del-proyecto)
+* [Ejecutar el Proyecto](#ejecutar-el-proyecto)
+* [Crear Componentes y Módulos](#crear-componentes-y-módulos)
+* [Acordarse de que los Módulos se importan en app.modules.ts](#acordarse-de-que-los-módulos-se-importan-en-appmodulests)
+* [Acordarse de declarar y exportar los componentes con su módulo correspondiente](#acordarse-de-declarar-y-exportar-los-componentes-con-su-módulo-correspondiente)
 
-## Documentacion Node Js
+Para comenzar a usar Angular Js es necesario tener instalado Node Js , a continuación se adjunta documento para instalaro.
+
+## Documentación Node Js
 
 [Node Js](https://nodejs.org/en/download/)
 
-Se recomienda istalar la version LTS
+Se recomienda instalar la versión LTS
 
-## Instalacion CLI Angular Js
+## Instalación CLI Angular Js
 
-Para comenzar a usar Angular es necesario que instalen de mandera global el CLI de angular que le permitira crar los proyectos y sus respectivos componentes, modulos, etc
+Para comenzar a utilizar Angular es necesario intalar de manera global el CLI de Angular, esto permitirá crear los proyectos y sus respectivos componentes, módulos, etc.
 
 ```bash
   npm install -g @angular/cli
 ```
 
-## Creacion Proyecto
+## Creación del Proyecto
 
 ```bash
   ng new "nombre-del-proyecto"
 ```
 
-cambiar "nombre-del-proyecto" por el nombre que desea para iniciar su proyecto
+* Cambiar "nombre-del-proyecto" por el nombre que desea para iniciar su proyecto
 
-## Ejecutar Proyecto
+## Ejecutar el Proyecto
 
 ```bash
   ng serve -o
 ```
 
-La bandera " -o " es para observar los cambios que se hacen en el proyecto y acutalziarlas automaticamente para que no se tenga que ejecutar el comando cada vez que se haga un cambio en el proyecto
+* La bandera " -o " es para observar los cambios que se hacen en el proyecto y actualizarlo automáticamente, gracias a esto no tenemos que ejecutar el comando manualmente cada vez que modificamos algo.
 
-## Crear Componentes y Modulos
+## Crear Componentes y Módulos
 
 **Crear Componente**
 
@@ -63,9 +72,9 @@ ng g m "nombre-del-modulo"
 
 ```
 
-## Acordarse de que los Modulos se importan en app.modules.ts
+## Acordarse de que los Módulos se importan en app.modules.ts
 
-Supongamos que creamos el modulo "Shared", entonces lo importamos en [ imports: ] de app.modules.ts
+* Supongamos que creamos el módulo "Shared", entonces lo importamos en [ imports: ] de app.modules.ts
 
 ```javascript
 @NgModule({
@@ -78,10 +87,9 @@ Supongamos que creamos el modulo "Shared", entonces lo importamos en [ imports: 
 })
 ```
 
-## Acordarse de declarar y exportar los componentes con su modulo correspondiente
+## Acordarse de declarar y exportar los componentes con su módulo correspondiente
 
-Supongamos que creamos un componente "Login", entonces lo declaramos en [ declarations: ] de su modulo
-y luego lo exportamos en [ exports: ] para asi se pueda visualizar en el resto de la aplicacion
+* Supongamos que creamos un componente "Login", entonces lo declaramos en [ declarations: ] de su módulo y luego lo exportamos en [ exports: ] para que asi se pueda visualizar en el resto de la aplicación.
 
 ```javascript
 @NgModule({
