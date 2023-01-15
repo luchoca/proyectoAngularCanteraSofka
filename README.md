@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Introduccion Angular Js v15
+=======
+## 🚀 Introduccion Angular Js v15
+>>>>>>> aff1918b7112ada5f8589bf294b8cb512cc08549
 
 ## Tabla de contenido
 * [Documentación Node Js](#documentación-node-js)
@@ -94,9 +98,62 @@ ng g m "nombre-del-modulo"
 ```javascript
 @NgModule({
 
-  declarations: [LoginComponent, SidebarComponent],
-  exports: [LoginComponent, SidebarComponent],
+  declarations: [LoginComponent],
+  exports: [LoginComponent],
   imports: [CommonModule],
 
 })
+<<<<<<< HEAD
 ```
+=======
+```
+
+## Pasos para Routing o Rutas en Angular
+
+- Crear Modulo app-routing.module.ts
+
+```bash
+  ng g m appRouting --flat
+```
+
+- Crear Rutas
+
+```javascript
+const routes: Routes = [
+  {
+    path: "",
+    component: LoginComponent,
+  },
+  {
+    path: "formularios",
+    component: FormulariosComponent,
+  },
+  {
+    path: "**",
+    redirectTo: "",
+  },
+];
+```
+
+- Importar el RouterModule y agregarle las rutras raices
+
+```javascript
+imports: [CommonModule, RouterModule.forRoot(routes)],
+```
+
+- Exportar el RouterModule
+
+```javascript
+ exports: [RouterModule],
+
+```
+
+### ! Recordar Importar el RouterModule en cada modulo en que se vaya a usar el Enrrutado ¡
+
+ejemplo en el SharedModule :
+
+```javascript
+ imports: [RouterModule],
+
+```
+>>>>>>> aff1918b7112ada5f8589bf294b8cb512cc08549
