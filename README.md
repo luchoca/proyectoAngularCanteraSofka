@@ -63,8 +63,32 @@ ng g m "nombre-del-modulo"
 
 ```
 
-**Crear Módulos de rutas**
+## Acordarse de que los Modulos se importan en app.modules.ts
 
-```bash
-  ng generate modulos "nombre-del-moudlo"
+Supongamos que creamos el modulo "Shared", entonces lo importamos en [ imports: ] de app.modules.ts
+
+```javascript
+@NgModule({
+
+  declarations: [AppComponent],
+  imports: [BrowserModule, SharedModule],
+  providers: [],
+  bootstrap: [AppComponent],
+
+})
+```
+
+## Acordarse de declarar y exportar los componentes con su modulo correspondiente
+
+Supongamos que creamos un componente "Login", entonces lo declaramos en [ declarations: ] de su modulo
+y luego lo exportamos en [ exports: ] para asi se pueda visualizar en el resto de la aplicacion
+
+```javascript
+@NgModule({
+
+  declarations: [LoginComponent, SidebarComponent],
+  exports: [LoginComponent, SidebarComponent],
+  imports: [CommonModule],
+
+})
 ```
