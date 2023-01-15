@@ -8,7 +8,7 @@
 * [Crear Componentes y Módulos](#crear-componentes-y-módulos)
 * [Acordarse de que los Módulos se importan en app.modules.ts](#acordarse-de-que-los-módulos-se-importan-en-appmodulests)
 * [Acordarse de declarar y exportar los componentes con su módulo correspondiente](#acordarse-de-declarar-y-exportar-los-componentes-con-su-módulo-correspondiente)
-* [! Recordar Importar el RouterModule en cada modulo en que se vaya a usar el Enrrutado ¡](#{!-recordar-importar-el-routermodule-en-cada-modulo-en-que-se-vaya-a-usar-el-enrrutado-¡})
+* [! Recordar Importar el RouterModule en cada modulo en que se vaya a usar el Enrrutado ¡](#recordar-importar-el-routermodule-en-cada-módulo-en-que-se-vaya-a-usar-el-enrrutado)
 
 Para comenzar a usar Angular Js es necesario tener instalado Node Js , a continuación se adjunta documento para instalaro.
 
@@ -141,7 +141,7 @@ imports: [CommonModule, RouterModule.forRoot(routes)],
 
 ```
 
-### ! Recordar Importar el RouterModule en cada modulo en que se vaya a usar el Enrrutado ¡
+### Recordar Importar el RouterModule en cada módulo en que se vaya a usar el Enrrutado
 
 Ejemplo en el SharedModule :
 
