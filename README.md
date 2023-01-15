@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Introduccion Angular Js v15
-=======
-## 🚀 Introduccion Angular Js v15
->>>>>>> aff1918b7112ada5f8589bf294b8cb512cc08549
+# 🚀 Introduccion Angular Js v15
 
 ## Tabla de contenido
 * [Documentación Node Js](#documentación-node-js)
@@ -103,10 +99,6 @@ ng g m "nombre-del-modulo"
   imports: [CommonModule],
 
 })
-<<<<<<< HEAD
-```
-=======
-```
 
 ## Pasos para Routing o Rutas en Angular
 
@@ -156,4 +148,3 @@ ejemplo en el SharedModule :
  imports: [RouterModule],
 
 ```
->>>>>>> aff1918b7112ada5f8589bf294b8cb512cc08549
