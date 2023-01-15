@@ -1,4 +1,4 @@
-## Introduccion Angular Js v15
+## 🚀 Introduccion Angular Js v15
 
 Para comenzar a usar Angular Js es necesario tener instalado el Node Js , a continuacion se adjunta documento para isntalar el mismo
 
@@ -86,9 +86,58 @@ y luego lo exportamos en [ exports: ] para asi se pueda visualizar en el resto d
 ```javascript
 @NgModule({
 
-  declarations: [LoginComponent, SidebarComponent],
-  exports: [LoginComponent, SidebarComponent],
+  declarations: [LoginComponent],
+  exports: [LoginComponent],
   imports: [CommonModule],
 
 })
+```
+
+## Pasos para Routing o Rutas en Angular
+
+- Crear Modulo app-routing.module.ts
+
+```bash
+  ng g m appRouting --flat
+```
+
+- Crear Rutas
+
+```javascript
+const routes: Routes = [
+  {
+    path: "",
+    component: LoginComponent,
+  },
+  {
+    path: "formularios",
+    component: FormulariosComponent,
+  },
+  {
+    path: "**",
+    redirectTo: "",
+  },
+];
+```
+
+- Importar el RouterModule y agregarle las rutras raices
+
+```javascript
+imports: [CommonModule, RouterModule.forRoot(routes)],
+```
+
+- Exportar el RouterModule
+
+```javascript
+ exports: [RouterModule],
+
+```
+
+### ! Recordar Importar el RouterModule en cada modulo en que se vaya a usar el Enrrutado ¡
+
+ejemplo en el SharedModule :
+
+```javascript
+ imports: [RouterModule],
+
 ```
