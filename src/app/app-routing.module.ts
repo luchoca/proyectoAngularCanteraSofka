@@ -6,6 +6,13 @@ import { FormulariosComponent } from './formularios/formularios.component';
 
 const routes: Routes = [
   {
+    path: 'formularios/formulariosTemplate',
+    loadChildren: () =>
+      import(
+        './formularios/formularios-template/formularios-template.module'
+      ).then((module) => module.FormulariosTemplateModule),
+  },
+  {
     path: '',
     component: LoginComponent,
   },
