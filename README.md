@@ -105,7 +105,7 @@ ng g m "nombre-del-modulo"
 
 # Pasos para Routing o Rutas en Angular
 
-- Crear Modulo app-routing.module.ts
+### Crear Modulo app-routing.module.ts
 
 ```bash
   ng g m appRouting --flat
@@ -130,24 +130,72 @@ const routes: Routes = [
 ];
 ```
 
-- Importar el RouterModule y agregarle las rutras raices
+### Importar el RouterModule y agregarle las rutras raices
 
 ```javascript
 imports: [CommonModule, RouterModule.forRoot(routes)],
 ```
 
-- Exportar el RouterModule
+### Exportar el RouterModule
 
 ```javascript
  exports: [RouterModule],
 
 ```
 
-### Recordar Importar el RouterModule en cada módulo en que se vaya a usar el Enrrutado
+- ###### Recordar Importar el RouterModule en cada módulo en que se vaya a usar el Enrrutado
 
 Ejemplo en el SharedModule :
 
 ```javascript
  imports: [RouterModule],
+
+```
+
+### Crear nuevos modulos dentro del modulo formulario para enrrutar dentro de este,
+
+###### A estoy le llamamos rutas hijas
+
+- Crear modulo routing para el formulario
+
+```bash
+  ng g m appRouting --flat
+```
+
+#### Crear Rutas
+
+```javascript
+const routesHijas: Routes = [
+  {
+    path: "formulariosTemplate",
+    component: FormulariosTemplateComponent,
+    children: [
+      {
+        path: "formulariosTemplate/basicos",
+        component: BasicosComponent,
+      },
+      {
+        path: "formulariosTemplate/dinamicos",
+        component: DinamicosComponent,
+      },
+      {
+        path: "**",
+        redirectTo: "basicos",
+      },
+    ],
+  },
+];
+```
+
+### Importar el RouterModule y agregarle las rutras hijas
+
+```javascript
+imports: [CommonModule, RouterModule.forChild(routesHijas)],
+```
+
+### Exportar el RouterModule
+
+```javascript
+ exports: [RouterModule],
 
 ```
