@@ -162,7 +162,7 @@ Ejemplo en el SharedModule :
   ng g m appRouting --flat
 ```
 
-#### Crear Rutas
+#### Crear Rutas y rutas hijas
 
 ```javascript
 const routesHijas: Routes = [
