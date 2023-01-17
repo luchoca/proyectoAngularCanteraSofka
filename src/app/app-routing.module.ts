@@ -13,6 +13,13 @@ const routes: Routes = [
       ).then((module) => module.FormulariosTemplateModule),
   },
   {
+    path: 'formularios/formulariosReactive',
+    loadChildren: () =>
+      import(
+        './formularios/formularios-reactive/formulario-reactive.module'
+      ).then((module) => module.FormularioReactiveModule),
+  },
+  {
     path: '',
     component: LoginComponent,
   },

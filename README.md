@@ -1,14 +1,15 @@
 # 🚀 Introduccion Angular Js v15
 
 ## Tabla de contenido
-* [Documentación Node Js](#documentación-node-js)
-* [Instalación CLI Angular Js](#instalación-cli-angular-js)
-* [Creación del Proyecto](#creación-del-proyecto)
-* [Ejecutar el Proyecto](#ejecutar-el-proyecto)
-* [Crear Componentes y Módulos](#crear-componentes-y-módulos)
-* [Acordarse de que los Módulos se importan en app.modules.ts](#acordarse-de-que-los-módulos-se-importan-en-appmodulests)
-* [Acordarse de declarar y exportar los componentes con su módulo correspondiente](#acordarse-de-declarar-y-exportar-los-componentes-con-su-módulo-correspondiente)
-* [! Recordar Importar el RouterModule en cada modulo en que se vaya a usar el Enrrutado ¡](#recordar-importar-el-routermodule-en-cada-módulo-en-que-se-vaya-a-usar-el-enrrutado)
+
+- [Documentación Node Js](#documentación-node-js)
+- [Instalación CLI Angular Js](#instalación-cli-angular-js)
+- [Creación del Proyecto](#creación-del-proyecto)
+- [Ejecutar el Proyecto](#ejecutar-el-proyecto)
+- [Crear Componentes y Módulos](#crear-componentes-y-módulos)
+- [Acordarse de que los Módulos se importan en app.modules.ts](#acordarse-de-que-los-módulos-se-importan-en-appmodulests)
+- [Acordarse de declarar y exportar los componentes con su módulo correspondiente](#acordarse-de-declarar-y-exportar-los-componentes-con-su-módulo-correspondiente)
+- [! Recordar Importar el RouterModule en cada modulo en que se vaya a usar el Enrrutado ¡](#recordar-importar-el-routermodule-en-cada-módulo-en-que-se-vaya-a-usar-el-enrrutado)
 
 Para comenzar a usar Angular Js es necesario tener instalado Node Js , a continuación se adjunta documento para instalaro.
 
@@ -32,7 +33,7 @@ Para comenzar a utilizar Angular es necesario intalar de manera global el CLI de
   ng new "nombre-del-proyecto"
 ```
 
-* Cambiar "nombre-del-proyecto" por el nombre que desea para iniciar su proyecto
+- Cambiar "nombre-del-proyecto" por el nombre que desea para iniciar su proyecto
 
 ## Ejecutar el Proyecto
 
@@ -40,7 +41,7 @@ Para comenzar a utilizar Angular es necesario intalar de manera global el CLI de
   ng serve -o
 ```
 
-* La bandera " -o " es para observar los cambios que se hacen en el proyecto y actualizarlo automáticamente, gracias a esto no tenemos que ejecutar el comando manualmente cada vez que modificamos algo.
+- La bandera " -o " es para observar los cambios que se hacen en el proyecto y actualizarlo automáticamente, gracias a esto no tenemos que ejecutar el comando manualmente cada vez que modificamos algo.
 
 ## Crear Componentes y Módulos
 
@@ -75,7 +76,7 @@ ng g m "nombre-del-modulo"
 
 ## Acordarse de que los Módulos se importan en app.modules.ts
 
-* Supongamos que creamos el módulo "Shared", entonces lo importamos en [ imports: ] de app.modules.ts
+- Supongamos que creamos el módulo "Shared", entonces lo importamos en [ imports: ] de app.modules.ts
 
 ```javascript
 @NgModule({
@@ -90,7 +91,7 @@ ng g m "nombre-del-modulo"
 
 ## Acordarse de declarar y exportar los componentes con su módulo correspondiente
 
-* Supongamos que creamos un componente "Login", entonces lo declaramos en [ declarations: ] de su módulo y luego lo exportamos en [ exports: ] para que asi se pueda visualizar en el resto de la aplicación.
+- Supongamos que creamos un componente "Login", entonces lo declaramos en [ declarations: ] de su módulo y luego lo exportamos en [ exports: ] para que asi se pueda visualizar en el resto de la aplicación.
 
 ```javascript
 @NgModule({
@@ -100,8 +101,9 @@ ng g m "nombre-del-modulo"
   imports: [CommonModule],
 
 })
+```
 
-## Pasos para Routing o Rutas en Angular
+# Pasos para Routing o Rutas en Angular
 
 - Crear Modulo app-routing.module.ts
 
@@ -109,7 +111,7 @@ ng g m "nombre-del-modulo"
   ng g m appRouting --flat
 ```
 
-- Crear Rutas
+### Crear Rutas
 
 ```javascript
 const routes: Routes = [
